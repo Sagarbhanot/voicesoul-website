@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoiceSoul — Your AI Workforce for Every Customer Conversation</title>
+<meta name="description" content="VoiceSoul is an AI voice and WhatsApp agent that answers, qualifies, follows up and books appointments for real estate and dental businesses — 24/7.">
+<meta name="theme-color" content="#0A0B10">
+
+<!-- Open Graph -->
+<meta property="og:title" content="VoiceSoul — Your AI Workforce for Every Customer Conversation">
+<meta property="og:description" content="AI Voice & WhatsApp agents that answer, qualify, follow up and book appointments — 24/7.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://voicesoul.in">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366F1'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='%230A0B10'/%3E%3Cpath d='M9 12v8M14 8v16M19 11v10M24 14v4' stroke='url(%23g)' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#hero" class="nav__logo" aria-label="VoiceSoul home">
+      <span class="nav__logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30"><rect width="32" height="32" rx="9" fill="url(#navGrad)"/><path d="M9 12v8M14 8v16M19 11v10M24 14v4" stroke="#0A0B10" stroke-width="2.4" stroke-linecap="round"/><defs><linearGradient id="navGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+      </span>
+      VoiceSoul
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#product">Product</a>
+      <a href="#why">Solutions</a>
+      <a href="#industries">Industries</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#resources">Resources</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="#demo-form" class="btn btn--primary btn--sm">Book a Demo</a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#product">Product</a>
+    <a href="#why">Solutions</a>
+    <a href="#industries">Industries</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#resources">Resources</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#demo-form" class="btn btn--primary" style="margin-top:8px;">Book a Demo</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="container hero__grid">
+    <div class="hero__copy reveal">
+      <p class="eyebrow">AI VOICE + WHATSAPP AGENTS</p>
+      <h1>Your AI Workforce for Every Customer Conversation.</h1>
+      <p class="hero__sub">VoiceSoul answers calls, handles WhatsApp conversations, qualifies leads, follows up and books appointments — 24/7.</p>
+      <div class="hero__cta">
+        <a href="#demo-form" class="btn btn--primary btn--lg">Book a Demo</a>
+        <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
+      </div>
+      <div class="hero__meta">
+        <div class="hero__meta-item"><span class="dot dot--live" aria-hidden="true"></span> Always answering — day or night</div>
+        <div class="hero__meta-item"><span class="dot" aria-hidden="true"></span> Built for Real Estate &amp; Dental teams</div>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal" aria-hidden="false">
+      <div class="phone-mock">
+        <div class="phone-mock__head">
+          <span class="phone-mock__title">VoiceSoul — Live Conversation</span>
+          <span class="badge badge--live">● Live</span>
+        </div>
+
+        <div class="chat" id="heroChat">
+          <div class="chat__msg chat__msg--in">
+            <span class="chat__channel">📞 Incoming Call</span>
+            Hi, I saw the 2BHK listing near Whitefield. Is it still available?
+          </div>
+          <div class="chat__msg chat__msg--out">
+            Yes, it's available! Can I ask — is this for you to buy or rent, and what's your target budget?
+          </div>
+          <div class="chat__msg chat__msg--in">
+            Looking to rent, budget around ₹35,000/month.
+          </div>
+          <div class="chat__msg chat__msg--out">
+            Perfect, that fits. I can schedule a viewing this week — would Thursday 5 PM work for you?
+          </div>
+          <div class="chat__system">✅ Lead qualified · Budget matched · Viewing requested</div>
+        </div>
+
+        <div class="phone-mock__footer">
+          <div class="status-pill status-pill--ok">Appointment Booked</div>
+          <div class="waveform" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+      <div class="floaty floaty--1">WhatsApp connected</div>
+      <div class="floaty floaty--2">Lead → CRM synced</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. TRUST / BUILT FOR ============ -->
+<section class="section trust" id="trust">
+  <div class="container">
+    <p class="trust__line reveal">Built for businesses where every conversation matters.</p>
+    <div class="trust__row reveal">
+      <span>Real Estate</span>
+      <span class="trust__dot">•</span>
+      <span>Dental Clinics</span>
+      <span class="trust__dot">•</span>
+      <span>Clinics &amp; Healthcare</span>
+      <span class="trust__dot">•</span>
+      <span>Professional Services</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. PROBLEM ============ -->
+<section class="section" id="problem">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">THE PROBLEM</p>
+      <h2>Every missed conversation is a missed opportunity.</h2>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2.2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 2l20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Calls go unanswered</h3>
+        <p>Prospects hang up and call the next business on the list.</p>
+      </div>
+
+      <div class="problem-card reveal">
+        <div class="problem-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Leads wait too long</h3>
+        <p>A slow response is often the same as no response at all.</p>
+      </div>
+
+      <div class="problem-card reveal">
+        <div class="problem-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zM18 8a6 6 0 1 0-12 0c0 5-2.5 6-2.5 6h17S18 13 18 8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Follow-ups get forgotten</h3>
+        <p>Without a system, warm leads quietly go cold.</p>
+      </div>
+
+      <div class="problem-card reveal">
+        <div class="problem-card__icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 9h10M7 13h10M7 17h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Repetitive conversations</h3>
+        <p>Your team spends hours answering the same questions.</p>
+      </div>
+    </div>
+
+    <p class="problem-transition reveal">VoiceSoul turns those conversations into an always-on AI workflow.</p>
+  </div>
+</section>
+
+<!-- ============ 8. PRODUCT ============ -->
+<section class="section section--alt" id="product">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">PRODUCT</p>
+      <h2>One AI workforce. Every conversation.</h2>
+      <p class="section__sub">Six connected capabilities that work together, not six separate tools.</p>
+    </div>
+
+    <div class="feature-grid">
+
+      <article class="feature-card feature-card--wide reveal">
+        <div class="feature-card__body">
+          <span class="feature-card__tag">Voice</span>
+          <h3>AI Voice Agent</h3>
+          <p>Natural AI conversations over the phone — no hold music, no missed calls, no scripts that sound robotic.</p>
+        </div>
+        <div class="feature-card__visual">
+          <div class="mini-call">
+            <div class="mini-call__ring">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2.2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="waveform waveform--sm"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <span class="mini-call__label">Speaking…</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__tag feature-card__tag--wa">WhatsApp</span>
+        <h3>WhatsApp AI Agent</h3>
+        <p>Respond, qualify and engage customers directly inside WhatsApp.</p>
+        <div class="feature-mini-chat">
+          <div class="feature-mini-chat__bubble">Do you have 3BHK options in Powai?</div>
+          <div class="feature-mini-chat__bubble feature-mini-chat__bubble--out">Yes — sending you 2 matches now.</div>
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__tag feature-card__tag--cyan">Qualification</span>
+        <h3>Lead Qualification</h3>
+        <p>Automatically understands intent, budget, requirements and readiness to buy.</p>
+        <div class="qual-mini">
+          <div class="qual-mini__row"><span>Budget</span><span class="check">✓</span></div>
+          <div class="qual-mini__row"><span>Location</span><span class="check">✓</span></div>
+          <div class="qual-mini__row"><span>Timeline</span><span class="check">✓</span></div>
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__tag feature-card__tag--amber">Scheduling</span>
+        <h3>Appointment Booking</h3>
+        <p>Schedules meetings, property visits and dental appointments in real time.</p>
+        <div class="cal-mini">
+          <div class="cal-mini__row"><span>Thu, 5:00 PM</span><span class="cal-mini__badge">Booked</span></div>
+        </div>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__tag feature-card__tag--navy">Automation</span>
+        <h3>Automated Follow-Up</h3>
+        <p>Keeps conversations moving without your team manually chasing anyone.</p>
+        <div class="followup-mini">Day 1 → Day 3 → Day 7 <span class="followup-mini__auto">Auto</span></div>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__tag feature-card__tag--pink">Handoff</span>
+        <h3>Human Handoff</h3>
+        <p>Transfers conversations to the right person the moment it needs a human touch.</p>
+        <div class="handoff-mini">AI Agent <span class="handoff-mini__arrow">→</span> Priya (Sales)</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. HOW IT WORKS ============ -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2>From first message to booked appointment.</h2>
+    </div>
+
+    <div class="flow reveal">
+      <div class="flow__step">
+        <div class="flow__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 2 8l10 6 10-6-10-6zM2 16l10 6 10-6M2 12l10 6 10-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="flow__label">Lead</span>
+      </div>
+      <div class="flow__connector"></div>
+      <div class="flow__step">
+        <div class="flow__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2.2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="flow__label">Voice / WhatsApp</span>
+      </div>
+      <div class="flow__connector"></div>
+      <div class="flow__step">
+        <div class="flow__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 9 9 0 0 1-3.3-.7L3 21l1.8-5.6a8.4 8.4 0 0 1-.8-3.6A8.4 8.4 0 0 1 12.5 3a8.5 8.5 0 0 1 8.5 8.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="flow__label">AI Conversation</span>
+      </div>
+      <div class="flow__connector"></div>
+      <div class="flow__step">
+        <div class="flow__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="flow__label">Qualification</span>
+      </div>
+      <div class="flow__connector"></div>
+      <div class="flow__step">
+        <div class="flow__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1 0 2.6-6.3M3 4v5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="flow__label">Follow-Up</span>
+      </div>
+      <div class="flow__connector"></div>
+      <div class="flow__step">
+        <div class="flow__icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <span class="flow__label">Appointment</span>
+      </div>
+      <div class="flow__connector"></div>
+      <div class="flow__step">
+        <div class="flow__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="flow__label">CRM / Human Team</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. INDUSTRIES ============ -->
+<section class="section section--alt" id="industries">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">INDUSTRIES</p>
+      <h2>Built around the way your business works.</h2>
+    </div>
+
+    <!-- REAL ESTATE -->
+    <div class="industry-card reveal">
+      <div class="industry-card__copy">
+        <span class="feature-card__tag">Real Estate</span>
+        <h3>Turn property enquiries into booked viewings.</h3>
+        <ul class="check-list">
+          <li>Responds instantly to property enquiries</li>
+          <li>Asks buyer/renter qualification questions</li>
+          <li>Understands location preferences and budget</li>
+          <li>Captures requirements and shares relevant listings</li>
+          <li>Schedules property viewings</li>
+          <li>Follows up with interested leads</li>
+          <li>Escalates hot leads to agents</li>
+        </ul>
+        <a href="#demo-form" class="link-cta">Explore VoiceSoul for Real Estate →</a>
+      </div>
+      <div class="industry-card__visual">
+        <div class="chat-panel">
+          <div class="chat-panel__head">🏠 Real Estate — WhatsApp</div>
+          <div class="chat-panel__body">
+            <div class="chat__msg chat__msg--in">Can I see properties under ₹80L in Thane?</div>
+            <div class="chat__msg chat__msg--out">Sure! Are you looking to buy or invest, and do you prefer ready-to-move or under construction?</div>
+            <div class="chat__msg chat__msg--in">Buy, ready-to-move.</div>
+            <div class="chat__msg chat__msg--out">Got it. I have 3 matches. Want me to set up a site visit this weekend?</div>
+            <div class="chat__system">✅ Buyer qualified · Site visit scheduled</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DENTISTRY -->
+    <div class="industry-card industry-card--rev reveal">
+      <div class="industry-card__copy">
+        <span class="feature-card__tag feature-card__tag--wa">Dentistry</span>
+        <h3>Turn every patient conversation into a booked appointment.</h3>
+        <ul class="check-list">
+          <li>Answers calls and common patient questions</li>
+          <li>Understands treatment requirements</li>
+          <li>Books and reschedules appointments</li>
+          <li>Sends follow-ups and reminders</li>
+          <li>Captures patient details securely</li>
+          <li>Routes complex questions to clinic staff</li>
+        </ul>
+        <a href="#demo-form" class="link-cta">Explore VoiceSoul for Dentistry →</a>
+      </div>
+      <div class="industry-card__visual">
+        <div class="chat-panel">
+          <div class="chat-panel__head">🦷 Dental Clinic — Call</div>
+          <div class="chat-panel__body">
+            <div class="chat__msg chat__msg--in">I need a root canal appointment this week.</div>
+            <div class="chat__msg chat__msg--out">I can help with that. Have you visited us before, or is this a new consultation?</div>
+            <div class="chat__msg chat__msg--in">New consultation, tooth pain since yesterday.</div>
+            <div class="chat__msg chat__msg--out">I've got an opening tomorrow at 11 AM with Dr. Mehta. Shall I confirm that?</div>
+            <div class="chat__system">✅ Appointment booked · Reminder scheduled</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. LIVE DEMO ============ -->
+<section class="section" id="demo">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">PRODUCT EXPERIENCE</p>
+      <h2>Don't just read about VoiceSoul. Talk to it.</h2>
+      <p class="section__sub">A simulated walkthrough of a real VoiceSoul call — press play to see it work.</p>
+    </div>
+
+    <div class="demo-shell reveal">
+      <div class="demo-shell__panel">
+        <div class="demo-shell__top">
+          <div>
+            <p class="demo-shell__title">Simulated Call</p>
+            <p class="demo-shell__note">This is a scripted product simulation, not a live AI connection.</p>
+          </div>
+          <button class="call-btn" id="callBtn">
+            <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2.2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span id="callBtnLabel">Try VoiceSoul</span>
+          </button>
+        </div>
+
+        <div class="demo-shell__stage">
+          <div class="waveform waveform--lg" id="demoWave">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <p class="demo-shell__status" id="demoStatus">Ready when you are.</p>
+        </div>
+
+        <div class="chat chat--demo" id="demoTranscript" aria-live="polite"></div>
+      </div>
+
+      <div class="demo-shell__side">
+        <div class="side-card">
+          <p class="side-card__label">Customer</p>
+          <div class="side-card__row"><span>Name</span><span id="dName">—</span></div>
+          <div class="side-card__row"><span>Interest</span><span id="dInterest">—</span></div>
+          <div class="side-card__row"><span>Budget</span><span id="dBudget">—</span></div>
+        </div>
+        <div class="side-card">
+          <p class="side-card__label">Qualification</p>
+          <div class="side-card__row"><span>Intent</span><span id="qIntent" class="pending">Pending</span></div>
+          <div class="side-card__row"><span>Budget fit</span><span id="qBudget" class="pending">Pending</span></div>
+          <div class="side-card__row"><span>Timeline</span><span id="qTimeline" class="pending">Pending</span></div>
+        </div>
+        <div class="side-card">
+          <p class="side-card__label">Appointment</p>
+          <div class="side-card__row"><span>Status</span><span id="aStatus" class="pending">Not booked</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. WHY VOICESOUL ============ -->
+<section class="section section--alt" id="why">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">WHY VOICESOUL</p>
+      <h2>Your team shouldn't have to chase every lead.</h2>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare__col compare__col--old">
+        <h4>Traditional approach</h4>
+        <ul>
+          <li>Missed calls</li>
+          <li>Delayed responses</li>
+          <li>Manual follow-ups</li>
+          <li>Limited working hours</li>
+          <li>Repetitive work for your team</li>
+        </ul>
+      </div>
+      <div class="compare__vs">VS</div>
+      <div class="compare__col compare__col--new">
+        <h4>With VoiceSoul</h4>
+        <ul>
+          <li>Instant response</li>
+          <li>24/7 availability</li>
+          <li>Automated follow-ups</li>
+          <li>Consistent conversations</li>
+          <li>Scales with demand</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. AI WORKFORCE POSITIONING ============ -->
+<section class="section workforce" id="workforce">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">POSITIONING</p>
+      <h2>Not a chatbot. An AI workforce.</h2>
+      <p class="section__sub">VoiceSoul doesn't just respond to messages — it works through the full conversation.</p>
+    </div>
+
+    <div class="pipeline reveal">
+      <span class="pipeline__step">Listen</span>
+      <span class="pipeline__arrow">→</span>
+      <span class="pipeline__step">Understand</span>
+      <span class="pipeline__arrow">→</span>
+      <span class="pipeline__step">Respond</span>
+      <span class="pipeline__arrow">→</span>
+      <span class="pipeline__step">Qualify</span>
+      <span class="pipeline__arrow">→</span>
+      <span class="pipeline__step">Act</span>
+      <span class="pipeline__arrow">→</span>
+      <span class="pipeline__step">Follow Up</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14. INTEGRATIONS ============ -->
+<section class="section" id="integrations-section">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">INTEGRATIONS</p>
+      <h2>Fits into how you already work.</h2>
+    </div>
+    <div class="integrations reveal">
+      <div class="integration-chip"><span class="integration-chip__icon">💬</span>WhatsApp</div>
+      <div class="integration-chip"><span class="integration-chip__icon">📞</span>Phone Lines</div>
+      <div class="integration-chip"><span class="integration-chip__icon">🗂️</span>CRM</div>
+      <div class="integration-chip"><span class="integration-chip__icon">📅</span>Calendars</div>
+      <div class="integration-chip"><span class="integration-chip__icon">🌐</span>Website</div>
+      <div class="integration-chip"><span class="integration-chip__icon">📝</span>Lead Forms</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15. ANALYTICS ============ -->
+<section class="section section--alt" id="analytics">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">BUSINESS VALUE</p>
+      <h2>See every conversation, at a glance.</h2>
+      <p class="section__sub">An illustrative view of the VoiceSoul dashboard — example data, not live performance figures.</p>
+    </div>
+
+    <div class="dashboard reveal">
+      <div class="dashboard__stat">
+        <span class="dashboard__num" data-count="482">0</span>
+        <span class="dashboard__label">Conversations Handled</span>
+      </div>
+      <div class="dashboard__stat">
+        <span class="dashboard__num" data-count="219">0</span>
+        <span class="dashboard__label">Leads Qualified</span>
+      </div>
+      <div class="dashboard__stat">
+        <span class="dashboard__num" data-count="97">0</span>
+        <span class="dashboard__label">Appointments Booked</span>
+      </div>
+      <div class="dashboard__stat">
+        <span class="dashboard__num" data-count="164">0</span>
+        <span class="dashboard__label">Follow-Ups Completed</span>
+      </div>
+      <div class="dashboard__stat">
+        <span class="dashboard__num" data-count="31">0</span>
+        <span class="dashboard__label">Human Handoffs</span>
+      </div>
+    </div>
+    <p class="dashboard__caption">Example dashboard metrics for illustration.</p>
+  </div>
+</section>
+
+<!-- ============ 16. USE CASES ============ -->
+<section class="section" id="use-cases">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">USE CASES</p>
+      <h2>Real conversations. Real outcomes.</h2>
+    </div>
+
+    <div class="usecase-grid">
+      <div class="usecase-card reveal">
+        <span class="feature-card__tag">Real Estate</span>
+        <p class="usecase-card__quote">"Can I see properties under AED 2M?"</p>
+        <p class="usecase-card__result">VoiceSoul qualifies the buyer and books a viewing.</p>
+      </div>
+      <div class="usecase-card reveal">
+        <span class="feature-card__tag feature-card__tag--wa">Dentistry</span>
+        <p class="usecase-card__quote">"I need a root canal appointment this week."</p>
+        <p class="usecase-card__result">VoiceSoul understands the request and schedules an appointment.</p>
+      </div>
+      <div class="usecase-card reveal">
+        <span class="feature-card__tag feature-card__tag--cyan">General Business</span>
+        <p class="usecase-card__quote">"I want to know more about your service."</p>
+        <p class="usecase-card__result">VoiceSoul answers, qualifies the prospect and routes the lead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 17. SECURITY ============ -->
+<section class="section section--alt" id="security">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">RELIABILITY</p>
+      <h2>Built to be dependable, not just clever.</h2>
+    </div>
+
+    <div class="security-grid reveal">
+      <div class="security-item">
+        <h4>Controlled AI behaviour</h4>
+        <p>Conversations stay within defined boundaries for your business.</p>
+      </div>
+      <div class="security-item">
+        <h4>Human handoff, always available</h4>
+        <p>Complex or sensitive conversations move to your team seamlessly.</p>
+      </div>
+      <div class="security-item">
+        <h4>Full conversation history</h4>
+        <p>Every call and chat is logged and accessible.</p>
+      </div>
+      <div class="security-item">
+        <h4>Business-specific knowledge</h4>
+        <p>VoiceSoul is configured on your listings, services and policies.</p>
+      </div>
+      <div class="security-item">
+        <h4>Secure data handling</h4>
+        <p>Customer information is handled with care, by design.</p>
+      </div>
+      <div class="security-item">
+        <h4>Reliable workflows</h4>
+        <p>Consistent behaviour across every conversation, every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 18. PRICING ============ -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">PRICING</p>
+      <h2>Custom pricing based on conversation volume and business requirements.</h2>
+      <p class="section__sub">Every business talks to customers differently — pricing is scoped to how you'll actually use VoiceSoul.</p>
+    </div>
+
+    <div class="pricing-card reveal">
+      <h3>Talk to us</h3>
+      <p>Tell us about your business and conversation volume, and we'll put together a plan that fits.</p>
+      <a href="#demo-form" class="btn btn--primary btn--lg">Book a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESOURCES (nav target) ============ -->
+<section class="section" id="resources">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="eyebrow">RESOURCES</p>
+      <h2>Guides &amp; help center</h2>
+      <p class="section__sub">Coming soon — implementation guides, industry playbooks and a help center.</p>
+    </div>
+    <div class="resource-grid reveal">
+      <div class="resource-card"><h4>Setup Guides</h4><span class="soon-pill">Coming soon</span></div>
+      <div class="resource-card"><h4>Industry Playbooks</h4><span class="soon-pill">Coming soon</span></div>
+      <div class="resource-card"><h4>Help Center</h4><span class="soon-pill">Coming soon</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 19. FAQ ============ -->
+<section class="section section--alt" id="faq">
+  <div class="container container--narrow">
+    <div class="section__head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions, answered.</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">What is VoiceSoul? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>VoiceSoul is an AI conversational workforce that answers calls and WhatsApp messages, qualifies leads, follows up and books appointments for your business.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Is VoiceSoul a chatbot? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>No. Chatbots reply to messages. VoiceSoul runs full conversations across voice and WhatsApp — qualifying, scheduling and following up on its own.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul answer phone calls? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Yes. VoiceSoul can answer inbound calls and hold natural conversations with customers.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul work on WhatsApp? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Yes. VoiceSoul handles WhatsApp conversations end-to-end, from first message to booking.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul book appointments? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Yes. VoiceSoul can schedule, confirm and reschedule appointments directly within the conversation.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul qualify leads? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Yes. It asks the right questions to understand intent, budget, requirements and readiness before passing leads on.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul transfer conversations to humans? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Yes. VoiceSoul hands off to your team whenever a conversation needs a human touch.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul work for real estate? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Yes. VoiceSoul is built for property enquiries, buyer/renter qualification and scheduling viewings.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul work for dental clinics? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Yes. VoiceSoul handles patient enquiries, appointment booking, rescheduling and reminders.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">Can VoiceSoul integrate with our CRM? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>VoiceSoul is designed to connect with common CRMs and calendars so qualified leads reach your existing systems.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">How long does implementation take? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Timelines depend on your business setup and channels. We'll walk you through the process on a demo call.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__q" aria-expanded="false">How does pricing work? <span class="faq-item__icon">+</span></button>
+        <div class="faq-item__a"><p>Pricing is based on conversation volume and business requirements. Talk to us for a plan tailored to you.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 20. FINAL CTA ============ -->
+<section class="section final-cta" id="demo-form">
+  <div class="final-cta__glow" aria-hidden="true"></div>
+  <div class="container reveal">
+    <h2>Never let another customer conversation go unanswered.</h2>
+    <p>Give your business an AI workforce that responds, qualifies and follows up — around the clock.</p>
+    <div class="hero__cta" style="justify-content:center;">
+      <a href="mailto:hello@voicesoul.in?subject=Book%20a%20VoiceSoul%20Demo" class="btn btn--primary btn--lg">Book a VoiceSoul Demo</a>
+      <a href="mailto:hello@voicesoul.in?subject=Talk%20to%20Sales" class="btn btn--ghost btn--lg">Talk to Sales</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 21. FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26"><rect width="32" height="32" rx="9" fill="url(#footGrad)"/><path d="M9 12v8M14 8v16M19 11v10M24 14v4" stroke="#0A0B10" stroke-width="2.4" stroke-linecap="round"/><defs><linearGradient id="footGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs></svg>
+        </span>
+        VoiceSoul
+      </a>
+      <p>AI-powered conversations that move business forward.</p>
+    </div>
+
+    <div class="footer__col">
+      <h5>Product</h5>
+      <a href="#product">Product</a>
+      <a href="#why">Solutions</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+
+    <div class="footer__col">
+      <h5>Industries</h5>
+      <a href="#industries">Real Estate</a>
+      <a href="#industries">Dentistry</a>
+    </div>
+
+    <div class="footer__col">
+      <h5>Company</h5>
+      <a href="#demo-form">Contact</a>
+      <a href="#" onclick="return false;">Privacy Policy</a>
+      <a href="#" onclick="return false;">Terms</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© <span id="year"></span> VoiceSoul. All rights reserved.</span>
+    <div class="footer__social">
+      <a href="#" aria-label="LinkedIn" onclick="return false;">in</a>
+      <a href="#" aria-label="Twitter" onclick="return false;">X</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
