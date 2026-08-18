@@ -14,12 +14,46 @@ navBurger.addEventListener('click', () => {
   navBurger.setAttribute('aria-expanded', String(isOpen));
 });
 
-mobileNav.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
+mobileNav.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('click', () => {
     mobileNav.classList.remove('is-open');
     navBurger.classList.remove('is-open');
     navBurger.setAttribute('aria-expanded', 'false');
   });
+});
+
+/* ---------- Demo request modal ---------- */
+const demoOverlay = document.getElementById('demoModalOverlay');
+const demoClose = document.getElementById('demoModalClose');
+const demoForm = document.getElementById('demoForm');
+const demoNote = document.getElementById('demoFormNote');
+
+function openDemoModal() {
+  demoOverlay.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  const firstField = document.getElementById('dfName');
+  if (firstField) firstField.focus();
+}
+
+function closeDemoModal() {
+  demoOverlay.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.js-open-demo').forEach(btn => {
+  btn.addEventListener('click', openDemoModal);
+});
+
+demoClose.addEventListener('click', closeDemoModal);
+demoOverlay.addEventListener('click', (e) => {
+  if (e.target === demoOverlay) closeDemoModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && demoOverlay.classList.contains('is-open')) closeDemoModal();
+});
+demoForm.addEventListener('submit', () => {
+  demoNote.style.color = 'var(--primary-ink)';
+  demoNote.textContent = 'Sending your request…';
 });
 
 /* ---------- Sticky nav shadow ---------- */

@@ -585,6 +585,45 @@ button{ font-family: inherit; cursor:pointer; }
   display:flex; align-items:center; justify-content:center; font-size:12.5px; font-weight:700;
 }
 
+/* ---------- Demo request modal ---------- */
+.modal-overlay{
+  position: fixed; inset:0; z-index: 200;
+  background: rgba(23,19,50,0.55); backdrop-filter: blur(4px);
+  display:flex; align-items:center; justify-content:center; padding: 20px;
+  opacity:0; pointer-events:none; transition: opacity .22s ease;
+}
+.modal-overlay.is-open{ opacity:1; pointer-events:auto; }
+.modal{
+  position:relative; width:100%; max-width: 460px;
+  background: var(--surface); border:1px solid var(--border-strong); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md); padding: 36px 32px 28px;
+  transform: translateY(14px) scale(.98); transition: transform .22s ease;
+  max-height: 90vh; overflow-y:auto;
+}
+.modal-overlay.is-open .modal{ transform:none; }
+.modal h3{ font-size: 22px; margin-bottom:6px; }
+.modal__sub{ font-size:14px; margin-bottom: 22px; }
+.modal__close{
+  position:absolute; top:16px; right:16px; width:32px; height:32px; border-radius:50%;
+  background: var(--surface-2); border:1px solid var(--border); color: var(--text-muted);
+  display:flex; align-items:center; justify-content:center; font-size:14px;
+  transition: background .15s ease, color .15s ease;
+}
+.modal__close:hover{ background: var(--border-strong); color: var(--text); }
+.form-field{ margin-bottom: 16px; }
+.form-field label{
+  display:block; font-family: var(--font-head); font-size:13px; font-weight:600;
+  color: var(--text-muted); margin-bottom:6px;
+}
+.form-field .req{ color: #DB2777; }
+.form-field input{
+  width:100%; font-family: var(--font-body); font-size:14.5px; color: var(--text);
+  background: var(--surface-2); border:1px solid var(--border-strong); border-radius: var(--radius-sm);
+  padding: 11px 14px; transition: border-color .15s ease, box-shadow .15s ease;
+}
+.form-field input:focus{ outline:none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
+.modal__note{ text-align:center; font-size:13px; margin: 14px 0 0; min-height: 18px; }
+
 /* ---------- Reveal on scroll ---------- */
 .reveal{ opacity:0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible{ opacity:1; transform:none; }
