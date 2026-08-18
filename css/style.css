@@ -149,9 +149,10 @@ button{ font-family: inherit; cursor:pointer; }
 }
 .nav__logo{
   display:flex; align-items:center; gap:10px;
-  font-family: var(--font-head); font-weight: 700; font-size: 19px; color: var(--text);
+  font-family: "Poppins", var(--font-head); font-weight: 700; font-size: 20px; color: var(--text);
 }
 .nav__logo-mark{ display:flex; }
+.nav__logo-text{ display:inline-flex; letter-spacing: -0.01em; }
 .logo-soul{
   background: linear-gradient(90deg, #2563EB 0%, #7C6CF6 60%, #8B5CF6 100%);
   -webkit-background-clip: text; background-clip:text; color:transparent;
