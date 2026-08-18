@@ -152,6 +152,10 @@ button{ font-family: inherit; cursor:pointer; }
   font-family: var(--font-head); font-weight: 700; font-size: 19px; color: var(--text);
 }
 .nav__logo-mark{ display:flex; }
+.logo-soul{
+  background: linear-gradient(90deg, #2563EB 0%, #7C6CF6 60%, #8B5CF6 100%);
+  -webkit-background-clip: text; background-clip:text; color:transparent;
+}
 .nav__links{ display:flex; align-items:center; gap: 34px; }
 .nav__links a{
   font-size: 14.5px; font-weight: 500; color: var(--text-muted);
