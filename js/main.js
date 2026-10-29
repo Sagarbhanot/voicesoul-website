@@ -64,6 +64,16 @@ demoForm.addEventListener('submit', async (e) => {
       body: new URLSearchParams(new FormData(demoForm)).toString()
     });
     if (!res.ok) throw new Error('Request failed: ' + res.status);
+    // Also email the lead via FormSubmit (same as before). Best effort:
+    // the lead is already saved in Netlify Forms even if this fails.
+    const lead = Object.fromEntries(new FormData(demoForm));
+    delete lead['form-name'];
+    delete lead['bot-field'];
+    fetch('https://formsubmit.co/ajax/mrktfox.india@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ ...lead, _subject: '🎙️ New Demo Lead — VoiceSoul Website', _template: 'table', _captcha: 'false' })
+    }).catch(() => {});
     demoForm.reset();
     demoNote.style.color = '#16a34a';
     demoNote.textContent = "Thank you! We'll get back to you within 24 hours.";
