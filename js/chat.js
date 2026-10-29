@@ -1,6 +1,6 @@
 /* ---------- VoiceSoul chat assistant ----------
-   Collects name, email and phone before the chat starts, then emails
-   mrktfox (FormSubmit) on chat start and for every visitor message,
+   Collects name, email and phone before the chat starts, then sends the
+   chat start and every visitor message to the team's Google Chat space,
    with a copy saved in Netlify Forms. */
 (function () {
   const wrap = document.createElement('div');
@@ -42,18 +42,19 @@
     body.appendChild(t); body.scrollTop = body.scrollHeight;
     setTimeout(() => { t.remove(); add(text, 'bot'); }, 600);
   }
-  // Saves to Netlify Forms (always works) and emails mrktfox (FormSubmit).
-  function send(subject, extra) {
-    const data = { 'Name': lead.name, 'Email': lead.email, 'Contact Number': lead.phone, ...extra };
+  const session = Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  // Sends to the team's Google Chat (via /api/chat) and keeps a copy in Netlify Forms.
+  function send(type, text) {
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type, text, session, name: lead.name, email: lead.email, phone: lead.phone })
+    }).catch(() => {});
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({ 'form-name': 'chat-message', ...data }).toString()
-    }).catch(() => {});
-    fetch('https://formsubmit.co/ajax/mrktfox.india@gmail.com', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ ...data, _subject: subject, _template: 'table', _captcha: 'false', _replyto: lead.email })
+      body: new URLSearchParams({ 'form-name': 'chat-message', 'Name': lead.name, 'Email': lead.email,
+        'Contact Number': lead.phone, 'Message': type === 'start' ? 'Chat started' : text }).toString()
     }).catch(() => {});
   }
   function handle(text) {
@@ -70,11 +71,11 @@
     if (step === 'phone') {
       if (text.replace(/\D/g, '').length < 10) return bot('Please share a valid phone number with at least 10 digits.');
       lead.phone = text; step = 'chat';
-      send('💬 New Chat Started — VoiceSoul Website — ' + lead.name, { 'Message': 'Visitor started a chat on voicesoul.in. Reply to this email to talk to them.' });
+      send('start');
       return bot(`Thank you, ${lead.name}! You're connected with the VoiceSoul team. Please type your question below and we'll get back to you shortly.`);
     }
     // step === 'chat': every message goes to the team
-    send('💬 Chat Message from ' + lead.name + ' — VoiceSoul Website', { 'Message': text });
+    send('message', text);
     if (!acked) { acked = true; bot(`Got it! Our team has received your message and will reply to you at ${lead.email} or on ${lead.phone} shortly.`); }
   }
 
