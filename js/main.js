@@ -252,3 +252,8 @@ callBtn.addEventListener('click', () => {
 });
 
 resetDemo();
+
+/* ---------- Placeholder links (no page yet): don't jump to top ---------- */
+document.querySelectorAll('.footer a[href="#"], footer a[href="#"]').forEach(a => {
+  a.addEventListener('click', (e) => e.preventDefault());
+});

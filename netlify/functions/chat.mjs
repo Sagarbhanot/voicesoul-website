@@ -1,6 +1,7 @@
 // Forwards website chat messages to the VoiceSoul Google Chat space.
 // The webhook URL is a secret: it lives in the Netlify environment
 // variable GCHAT_WEBHOOK_URL, never in this (public) repo.
+
 // Trim, cap length, and strip < > so visitors can't inject Google Chat
 // mentions like <users/all> or formatted links.
 const clip = (v, n) => String(v ?? '').replace(/[<>]/g, '').trim().slice(0, n);
@@ -18,6 +19,11 @@ export default async (req) => {
   if (!ALLOWED_ORIGINS.has(req.headers.get('origin'))) return new Response('Forbidden', { status: 403 });
   const hook = process.env.GCHAT_WEBHOOK_URL;
   if (!hook) return new Response('Chat is not configured', { status: 500 });
+
+  if (!(req.headers.get('content-type') || '').startsWith('application/json'))
+    return new Response('Unsupported type', { status: 415 });
+  if (Number(req.headers.get('content-length') || 0) > 8000)
+    return new Response('Too large', { status: 413 });
 
   let b;
   try { b = await req.json(); } catch { return new Response('Bad request', { status: 400 }); }
@@ -43,4 +49,9 @@ export default async (req) => {
   return new Response(r.ok ? 'ok' : 'failed', { status: r.ok ? 200 : 502 });
 };
 
-export const config = { path: '/api/chat' };
+export const config = {
+  path: '/api/chat',
+  // Netlify blocks any single visitor (IP) that sends more than
+  // 20 messages per minute, so nobody can flood the Google Chat space.
+  rateLimit: { windowLimit: 20, windowSize: 60, aggregateBy: ['ip', 'domain'] }
+};
