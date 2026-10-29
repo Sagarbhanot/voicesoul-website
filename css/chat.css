@@ -1,0 +1,24 @@
+/* ---------- VoiceSoul chat assistant ---------- */
+.vs-chat-btn{position:fixed;right:20px;bottom:20px;z-index:900;width:60px;height:60px;border:0;border-radius:50%;background:var(--grad-primary);color:#fff;box-shadow:var(--shadow-md);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.vs-chat-btn:hover{transform:scale(1.06)}
+.vs-chat-btn svg{width:28px;height:28px}
+.vs-chat{position:fixed;right:20px;bottom:92px;z-index:901;width:370px;max-width:calc(100vw - 32px);height:540px;max-height:calc(100vh - 120px);background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:opacity .2s ease,transform .2s ease}
+.vs-chat.is-open{opacity:1;transform:none;pointer-events:auto}
+.vs-chat__head{background:var(--grad-primary);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.vs-chat__avatar{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-weight:700}
+.vs-chat .vs-chat__title{color:#fff;margin:0;font-weight:700;font-size:15px}
+.vs-chat .vs-chat__status{color:#fff;margin:2px 0 0;font-size:12px;opacity:.85}
+.vs-chat__close{margin-left:auto;background:none;border:0;color:#fff;font-size:20px;cursor:pointer;line-height:1}
+.vs-chat__body{flex:1;overflow-y:auto;padding:16px;background:var(--bg-alt);display:flex;flex-direction:column;gap:10px}
+.vs-msg{max-width:84%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.45;white-space:pre-line}
+.vs-msg--bot{align-self:flex-start;background:var(--surface);color:var(--text);border:1px solid var(--border);border-bottom-left-radius:4px}
+.vs-msg--user{align-self:flex-end;background:var(--primary);color:#fff;border-bottom-right-radius:4px}
+.vs-chips{display:flex;flex-wrap:wrap;gap:6px}
+.vs-chip{border:1px solid var(--primary);background:var(--surface);color:var(--primary-ink);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}
+.vs-chip:hover{background:var(--primary);color:#fff}
+.vs-chat__form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--border);background:var(--surface)}
+.vs-chat__input{flex:1;border:1px solid var(--border-strong);border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;outline:none}
+.vs-chat__input:focus{border-color:var(--primary)}
+.vs-chat__send{border:0;border-radius:999px;background:var(--primary);color:#fff;padding:0 16px;font-weight:600;cursor:pointer}
+.vs-typing{align-self:flex-start;color:var(--text-faint);font-size:13px}
+@media (max-width:480px){.vs-chat{left:16px;right:16px;width:auto;bottom:88px;height:calc(100vh - 110px)}.vs-chat-btn{right:16px;bottom:16px}}
