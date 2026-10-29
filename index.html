@@ -798,10 +798,9 @@
     <h3 id="demoModalTitle">Let's set up your VoiceSoul demo.</h3>
     <p class="modal__sub">Share your details and we'll get back to you within 24 hours.</p>
 
-    <form id="demoForm" action="https://formsubmit.co/mrktfox.india@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="🎙️ New Demo Lead — VoiceSoul Website">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
+    <form id="demoForm" name="demo-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="demo-request">
+      <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
       <div class="form-field">
         <label for="dfName">Full Name <span class="req">*</span></label>
         <input id="dfName" name="Full Name" type="text" required>

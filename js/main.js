@@ -51,9 +51,28 @@ demoOverlay.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && demoOverlay.classList.contains('is-open')) closeDemoModal();
 });
-demoForm.addEventListener('submit', () => {
+demoForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = demoForm.querySelector('button[type="submit"]');
+  btn.disabled = true;
   demoNote.style.color = 'var(--primary-ink)';
   demoNote.textContent = 'Sending your request…';
+  try {
+    const res = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(demoForm)).toString()
+    });
+    if (!res.ok) throw new Error('Request failed: ' + res.status);
+    demoForm.reset();
+    demoNote.style.color = '#16a34a';
+    demoNote.textContent = "Thank you! We'll get back to you within 24 hours.";
+  } catch (err) {
+    demoNote.style.color = '#dc2626';
+    demoNote.textContent = 'Something went wrong. Please try again in a few minutes.';
+  } finally {
+    btn.disabled = false;
+  }
 });
 
 /* ---------- Sticky nav shadow ---------- */
